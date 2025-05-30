@@ -1,0 +1,21 @@
+site_name: IBM Informix as a Data Engineering Product
+site_description: Analysis and overview of IBM Informix database platform
+
+theme:
+  name: material
+
+nav:
+  - Introduction: index.md
+  - Product Overview: product-overview.md
+  - SWOT Analysis: swot-analysis.md
+  - Market Analysis: market-analysis.md
+  - Expansion Projects: expansion-projects.md
+  - Conclusion: conclusion.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - tables
+
+extra_css:
+  - stylesheets/extra.css

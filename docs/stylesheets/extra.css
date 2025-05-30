@@ -1,0 +1,115 @@
+.md-header {
+  position: relative;
+  background: #030b29;
+  overflow: hidden;
+}
+
+.md-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 40%,
+    rgba(69, 137, 255, 0.1) 40%,
+    rgba(69, 137, 255, 0.2) 50%,
+    rgba(69, 137, 255, 0.1) 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: dataFlow 5s linear infinite;
+}
+
+.md-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(15, 98, 254, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+@keyframes dataFlow {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.md-header__title,
+.md-tabs__link,
+.md-header-nav__button {
+  color: white !important;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+
+.md-typeset h1 {
+  color: #0f62fe;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+}
+
+.md-typeset h2 {
+  color: #0043ce;
+  font-weight: 600;
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  color: #1261a0;
+}
+
+/* Make blockquotes stand out */
+.md-typeset blockquote {
+  border-left: 4px solid #0f62fe;
+  background-color: rgba(15, 98, 254, 0.05);
+  padding: 0.5em 1em;
+  margin: 1.5em 0;
+}
+
+/* Better horizontal rules */
+.md-typeset hr {
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(15, 98, 254, 0.5), rgba(0, 0, 0, 0));
+  border: 0;
+  margin: 2em 0;
+}
+
+/* Custom tip boxes */
+.tip, .warning {
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+.tip {
+  background-color: rgba(15, 98, 254, 0.05);
+  border-left: 4px solid #0f62fe;
+}
+
+.warning {
+  background-color: rgba(254, 165, 0, 0.05);
+  border-left: 4px solid #fea500;
+}
+
+/* Enhance lists */
+.md-typeset ul li {
+  margin-bottom: 0.5em;
+}
+
+.md-typeset ul li::marker {
+  color: #0f62fe;
+}
